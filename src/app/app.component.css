@@ -1,11 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+header {
+    text-align: center;
+    width: 100vw;
+}
 h1{
-    
+    font-family: 'Lucida Sans Unicode';
+    background-color: #ebbf99 ;
+    font-size: 50px;
+    color:#331f0a;
 }
-select {
-    float: left;
 
-}
-.info{
-    margin-left: 100px;
-    float: left;
-}
+
+

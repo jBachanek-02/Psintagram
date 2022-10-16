@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,} from '@angular/core';
 import { ApiService } from './services/api.service';
 
 @Component({
@@ -16,10 +16,16 @@ export class DogsComponent {
 
   constructor(private apiService: ApiService) { }
 
+  
+
   changeBreed(): void {
+    console.log(this.selectedBreed);
     this.breedImg = this.apiService.getImg(this.selectedBreed);
     this.wikiLink = `https://en.wikipedia.org/wiki/${this.selectedBreed}`
   }
 
+  changeImg(): void {
+    this.breedImg = this.apiService.getImg(this.selectedBreed);
+  }
 
 }
