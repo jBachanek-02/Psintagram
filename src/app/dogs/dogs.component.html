@@ -1,0 +1,12 @@
+<select *ngIf="breeds | async as dogsList" name="dogs" [(ngModel)]="selectedBreed" (change)="changeBreed()" >
+	<option *ngFor="let breed of dogsList.message | keyvalue ">{{breed.key}}<option>
+</select>
+<div class ="info">
+    <div class="img">
+      <img *ngIf="breedImg | async as img" [src]="img.message" alt="akita">
+    </div>
+    <div class="content">
+      <h3>Przeczytaj więcej o tej rasie na wikipedii:</h3>
+      <a [href]="wikiLink">{{selectedBreed}}</a>
+    </div>
+  </div>
